@@ -1,0 +1,249 @@
+<main *ngIf="!showNextComponent">
+    <section class="header-section">
+        <p class="line" #textLine></p>
+        <button class="skip-button text" (click)="onSkipIntro()">Skip</button>
+    </section>
+</main>
+<main *ngIf="showNextComponent">
+    <section class="header-section" #homeRef>
+        <nav class="flex">
+            <button class="nav-button" [ngxScrollTo]="aboutRef">
+                {{ 'HEADER.ABOUT' | translate }}
+            </button>
+            <button class="nav-button" [ngxScrollTo]="skillsRef">
+                {{ 'HEADER.SKILLS' | translate }}
+            </button>
+            <button class="nav-button" [ngxScrollTo]="projectsRef">
+                {{ 'HEADER.PROJECTS' | translate }}
+            </button>
+            <div class="flex">
+                <button class="nav-button" (click)="onChangeLanguage('eng')">
+                    Eng
+                </button>
+                <button class="nav-button" (click)="onChangeLanguage('pl')">
+                    Pl
+                </button>
+                <button class="nav-button" (click)="onChangeLanguage('ua')">
+                    Ua
+                </button>
+            </div>
+            <button class="nav-button theme-changer" (click)="onThemeSwitchChange()">
+            </button>
+        </nav>
+        <h1 class="main-text">
+            <span class="main-text-part">{{ 'HEADER.HI' | translate }}</span><br>
+            <span class="main-text-part">{{ 'HEADER.NAME' | translate }}</span><br>
+            <span class="main-text-part">{{ 'HEADER.DEVELOPER' | translate }}</span>
+        </h1>
+        <div class="waveAnimation">
+            <div class="waveWrapperInner bgTop">
+                <div class="wave waveTop"></div>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+                <div class="wave waveMiddle"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+                <div class="wave waveBottom"></div>
+            </div>
+        </div>
+    </section>
+    <section #aboutRef>
+        <h2>
+            {{ 'HEADER.ABOUT' | translate }}
+        </h2>
+        <div class="flex section-params text">
+            <div class="text-table flex column">
+                <p>
+                    {{ 'ABOUT.INTRO' | translate }}
+                </p>
+                <table>
+                    <tr>
+                        <td class="first-column">
+                            <div class="circle"></div>
+                            {{ 'ABOUT.BEGIN' | translate }}
+                        </td>
+                        <td class="second-column">
+                            {{ 'ABOUT.BEGIN_TEXT' | translate }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-column">
+                            <div class="circle"></div>
+                            {{ 'ABOUT.NOW' | translate }}
+                        </td>
+                        <td class="second-column">
+                            {{ 'ABOUT.NOW_TEXT' | translate }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-column">
+                            <div class="circle"></div>
+                            {{ 'ABOUT.FUTURE' | translate }}
+                        </td>
+                        <td class="second-column">
+                            {{ 'ABOUT.FUTURE_TEXT' | translate }}
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    {{ 'ABOUT.LOCATION' | translate }}<br>
+                    {{ 'ABOUT.LANGUAGES' | translate }}<br>
+                    {{ 'ABOUT.EDUCATION' | translate }}<br>
+                    {{ 'ABOUT.OPEN_TO_WORK' | translate }}
+                </p>
+            </div>
+            <img class="image" src="../../assets/img/me.jpeg">
+        </div>
+    </section>
+    <section #skillsRef>
+        <h2>
+            {{ 'HEADER.SKILLS' | translate }}
+        </h2>
+        <div class="flex column section-params text">
+            <p>
+                {{ 'SKILLS.INTRO' | translate }}
+            </p>
+            <div class="flex">
+                <div>
+                    <p>
+                        {{ 'SKILLS.ALSO_I_CAN' | translate }}
+                    </p>
+                    <ul>
+                        <li>
+                            {{ 'SKILLS.LIBRARIES' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.ROUTING' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.FORMS' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.ANIMATIONS' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.LANGUAGES' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.LAYOUTS' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.THEMES' | translate }}
+                        </li>
+                    </ul>
+                    <p>
+                        {{ 'SKILLS.STUDYIND' | translate }}
+                    </p>
+                    <ul>
+                        <li>
+                            {{ 'SKILLS.SCSS' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.CLEAR_CODE' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.DIFFICULT_ANIMATIONS' | translate }}
+                        </li>
+                        <li>
+                            {{ 'SKILLS.BACKEND' | translate }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex skill-buttons">
+                    <div class="flex column">
+                        <button class="skill-button">Html</button>
+                        <button class="skill-button">CSS</button>
+                    </div>
+                    <div class="flex column">
+                        <button class="skill-button">JavaScript</button>
+                        <button class="skill-button">Typescript</button>
+                    </div>
+                    <div class="flex column">
+                        <button class="skill-button">Angular</button>
+                        <button class="skill-button">Figma</button>
+                    </div>
+                    <div class="flex column">
+                        <button class="skill-button">Photoshop</button>
+                        <button class="skill-button">Git</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section #projectsRef>
+        <h2>
+            {{ 'HEADER.PROJECTS' | translate }}
+        </h2>
+        <div class="section-params">
+            <div class="flex text-image-container">
+                <div class="flex column">
+                    <img class="image" src="../../assets/img/skycall-screen.png">
+                    <p class="text description">
+                        {{ 'PROJECTS.DESCRIPTION' | translate }}
+                    </p>
+                </div>
+                <div class="flex column">
+                    <img class="image" src="../../assets/img/itpower-screen.png">
+                    <p class="text description">
+                        {{ 'PROJECTS.DESCRIPTION' | translate }}
+                    </p>
+                </div>
+                <div class="flex column">
+                    <img class="image" src="../../assets/img/innet-screen.png">
+                    <p class="text description">
+                        {{ 'PROJECTS.DESCRIPTION' | translate }}
+                    </p>
+                </div>
+            </div>
+            <p class="text project-link">
+                {{ 'PROJECTS.ALL_PROJECTS' | translate }} <a>{{ 'PROJECTS.HERE' | translate }}</a>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="flex text">
+            <div class="flex">
+                <table>
+                    <tr>
+                        <td>
+                            E-mail:
+                        </td>
+                        <td>
+                            evg201104@gmail.com
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Telegram:
+                        </td>
+                        <td>
+                            @kervyi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Github
+                        </td>
+                        <td>
+                            kervyi7
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="flex column">
+                <button class="text" [ngxScrollTo]="homeRef">
+                    {{ 'FOOTER.HOME' | translate }}
+                </button>
+                <button class="text" [ngxScrollTo]="aboutRef">
+                    {{ 'HEADER.ABOUT' | translate }}
+                </button>
+                <button class="text" [ngxScrollTo]="skillsRef">
+                    {{ 'HEADER.SKILLS' | translate }}
+                </button>
+                <button class="text" [ngxScrollTo]="projectsRef">
+                    {{ 'HEADER.PROJECTS' | translate }}
+                </button>
+            </div>
+        </div>
+    </footer>
+</main>
