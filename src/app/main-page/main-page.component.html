@@ -6,29 +6,32 @@
 </main>
 <main *ngIf="showNextComponent">
     <section class="header-section" #homeRef>
-        <nav class="flex">
-            <button class="nav-button" [ngxScrollTo]="aboutRef">
-                {{ 'HEADER.ABOUT' | translate }}
-            </button>
-            <button class="nav-button" [ngxScrollTo]="skillsRef">
-                {{ 'HEADER.SKILLS' | translate }}
-            </button>
-            <button class="nav-button" [ngxScrollTo]="projectsRef">
-                {{ 'HEADER.PROJECTS' | translate }}
-            </button>
-            <div class="flex">
-                <button class="nav-button" (click)="onChangeLanguage('eng')">
-                    Eng
+        <button *ngIf="isMobile" class="humburger" (click)="toggleMenu()"></button>
+        <nav [ngClass]="{ 'mobile-menu': isMobile }">
+            <div class="flex" [ngClass]="{ 'hide-menu': !isOpenMenu, 'show-menu' : isOpenMenu, 'column': isMobile }">
+                <button class="nav-button" [ngxScrollTo]="aboutRef" (click)="toggleMenu()">
+                    {{ 'HEADER.ABOUT' | translate }}
                 </button>
-                <button class="nav-button" (click)="onChangeLanguage('pl')">
-                    Pl
+                <button class="nav-button" [ngxScrollTo]="skillsRef" (click)="toggleMenu()">
+                    {{ 'HEADER.SKILLS' | translate }}
                 </button>
-                <button class="nav-button" (click)="onChangeLanguage('ua')">
-                    Ua
+                <button class="nav-button" [ngxScrollTo]="projectsRef" (click)="toggleMenu()"> 
+                    {{ 'HEADER.PROJECTS' | translate }}
+                </button>
+                <div [ngClass]="{ 'flex': !isMobile}">
+                    <button class="nav-button" (click)="onChangeLanguage('eng'); toggleMenu()">
+                        Eng
+                    </button>
+                    <button class="nav-button" (click)="onChangeLanguage('pl'); toggleMenu()">
+                        Pl
+                    </button>
+                    <button class="nav-button" (click)="onChangeLanguage('ua'); toggleMenu()">
+                        Ua
+                    </button>
+                </div>
+                <button class="nav-button theme-changer" (click)="onThemeSwitchChange(); toggleMenu()">
                 </button>
             </div>
-            <button class="nav-button theme-changer" (click)="onThemeSwitchChange()">
-            </button>
         </nav>
         <h1 class="main-text">
             <span class="main-text-part">{{ 'HEADER.HI' | translate }}</span><br>
@@ -57,7 +60,7 @@
                     {{ 'ABOUT.INTRO' | translate }}
                 </p>
                 <table>
-                    <tr>
+                    <tr [ngClass]="{ 'flex column': isMobile }">
                         <td class="first-column">
                             <div class="circle"></div>
                             {{ 'ABOUT.BEGIN' | translate }}
@@ -66,7 +69,7 @@
                             {{ 'ABOUT.BEGIN_TEXT' | translate }}
                         </td>
                     </tr>
-                    <tr>
+                    <tr [ngClass]="{ 'flex column': isMobile }">
                         <td class="first-column">
                             <div class="circle"></div>
                             {{ 'ABOUT.NOW' | translate }}
@@ -75,7 +78,7 @@
                             {{ 'ABOUT.NOW_TEXT' | translate }}
                         </td>
                     </tr>
-                    <tr>
+                    <tr [ngClass]="{ 'flex column': isMobile }">
                         <td class="first-column">
                             <div class="circle"></div>
                             {{ 'ABOUT.FUTURE' | translate }}
@@ -92,7 +95,7 @@
                     {{ 'ABOUT.OPEN_TO_WORK' | translate }}
                 </p>
             </div>
-            <img class="image" src="../../assets/img/me.jpeg">
+            <img class="image" src="/assets/img/me.jpeg">
         </div>
     </section>
     <section #skillsRef>
@@ -150,19 +153,19 @@
                     </ul>
                 </div>
                 <div class="flex skill-buttons">
-                    <div class="flex column">
+                    <div class="flex" [ngClass]="{ 'column': !isMobile, 'skill-buttons-mobile': isMobile }">
                         <button class="skill-button">Html</button>
                         <button class="skill-button">CSS</button>
                     </div>
-                    <div class="flex column">
+                    <div class="flex" [ngClass]="{ 'column': !isMobile, 'skill-buttons-mobile': isMobile }">
                         <button class="skill-button">JavaScript</button>
                         <button class="skill-button">Typescript</button>
                     </div>
-                    <div class="flex column">
+                    <div class="flex" [ngClass]="{ 'column': !isMobile, 'skill-buttons-mobile': isMobile }">
                         <button class="skill-button">Angular</button>
                         <button class="skill-button">Figma</button>
                     </div>
-                    <div class="flex column">
+                    <div class="flex" [ngClass]="{ 'column': !isMobile, 'skill-buttons-mobile': isMobile }">
                         <button class="skill-button">Photoshop</button>
                         <button class="skill-button">Git</button>
                     </div>
@@ -177,19 +180,19 @@
         <div class="section-params">
             <div class="flex text-image-container">
                 <div class="flex column">
-                    <img class="image" src="../../assets/img/skycall-screen.png">
+                    <img class="image" src="/assets/img/skycall-screen.png">
                     <p class="text description">
                         {{ 'PROJECTS.DESCRIPTION' | translate }}
                     </p>
                 </div>
                 <div class="flex column">
-                    <img class="image" src="../../assets/img/itpower-screen.png">
+                    <img class="image" src="/assets/img/itpower-screen.png">
                     <p class="text description">
                         {{ 'PROJECTS.DESCRIPTION' | translate }}
                     </p>
                 </div>
                 <div class="flex column">
-                    <img class="image" src="../../assets/img/innet-screen.png">
+                    <img class="image" src="/assets/img/innet-screen.png">
                     <p class="text description">
                         {{ 'PROJECTS.DESCRIPTION' | translate }}
                     </p>
@@ -230,7 +233,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="flex column">
+            <div [ngClass]="{ 'flex column': !isMobile, 'center-position': isMobile }">
                 <button class="text" [ngxScrollTo]="homeRef">
                     {{ 'FOOTER.HOME' | translate }}
                 </button>
