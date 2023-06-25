@@ -23,7 +23,7 @@
 
     "SKILLS": {
         "INTRO": "With a strong focus on front-end development, I possess proficiency in HTML, CSS, and JavaScript. All of my projects were developed with Angular 8+. I strive to create visually appealing and user-friendly websites that offer seamless and engaging experiences for users. Additionally, I have experience working with Figma and Photoshop for web design. For version control, I am familiar with Git and Azure and have knowledge of basic commands.",
-        "ALSO_I_CAN": "Also, i can:",
+        "ALSO_I_CAN": "Also, I can:",
         "LIBRARIES": "use libraries like bootstrap and angular modules",
         "ROUTING": "create routing in application",
         "FORMS": "create sign-in and sign-up forms",

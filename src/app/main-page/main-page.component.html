@@ -6,7 +6,12 @@
 </main>
 <main *ngIf="showNextComponent">
     <section class="header-section" #homeRef>
-        <button *ngIf="isMobile" class="humburger" (click)="toggleMenu()"></button>
+        <button *ngIf="isMobile" id="nav-icon3" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav [ngClass]="{ 'mobile-menu': isMobile }">
             <div class="flex" [ngClass]="{ 'hide-menu': !isOpenMenu, 'show-menu' : isOpenMenu, 'column': isMobile }">
                 <button class="nav-button" [ngxScrollTo]="aboutRef" (click)="toggleMenu()">
@@ -15,7 +20,7 @@
                 <button class="nav-button" [ngxScrollTo]="skillsRef" (click)="toggleMenu()">
                     {{ 'HEADER.SKILLS' | translate }}
                 </button>
-                <button class="nav-button" [ngxScrollTo]="projectsRef" (click)="toggleMenu()"> 
+                <button class="nav-button" [ngxScrollTo]="projectsRef" (click)="toggleMenu()">
                     {{ 'HEADER.PROJECTS' | translate }}
                 </button>
                 <div [ngClass]="{ 'flex': !isMobile}">

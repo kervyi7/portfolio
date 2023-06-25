@@ -72,7 +72,7 @@ button {
 .main-text {
     font-weight: inherit;
     font-family: var(--header-font-family);
-    font-size: 40px;
+    font-size: min(10vw, 40px);
     margin-top: calc(40vh - 48px - 40px);
     text-align: left;
     margin-left: 5vw;
@@ -281,19 +281,11 @@ a {
 }
 
 @media screen and (orientation: portrait) {
-
-    .humburger {
-        background-image: url('../../assets/img/menu.svg');
-        background-size: cover;
-        width: 60px;
-        height: 60px;
-    }
-
     .mobile-menu {
         width: 100vw;
-        height: 30vh;
-        position: fixed;
+        position: absolute;
         text-align: center;
+        top: 0px;
     }
 
     .hide-menu {
@@ -356,5 +348,9 @@ a {
 
     .project-link {
         margin-block-end: 0;
+    }
+    .text-image-container div {
+        width: 96vw;
+        margin: auto;
     }
 }

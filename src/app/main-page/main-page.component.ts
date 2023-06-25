@@ -1,10 +1,10 @@
-import { Component, ElementRef, HostListener, NgZone, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, NgZone, Renderer2, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss']
+  styleUrls: ['./main-page.component.scss', './hamburger.scss']
 })
 export class MainPageComponent {
   @ViewChild('textLine') textLine!: ElementRef;
@@ -13,12 +13,12 @@ export class MainPageComponent {
   private _currentIndex = 0;
   private _timeouts: any[] = [];
   private _intervals: any[] = [];
-  public isLightTheme = true;
+  public isLightTheme = false;
   public showNextComponent: boolean = false;
   public isMobile = false;
   public isOpenMenu = false;
 
-  constructor(public translate: TranslateService, private ngZone: NgZone) {
+  constructor(public translate: TranslateService, private ngZone: NgZone, private renderer: Renderer2) {
     translate.addLangs(['eng', 'pl', 'ua']);
     translate.setDefaultLang('eng');
     this.ngZone.runOutsideAngular(() => {
@@ -36,7 +36,10 @@ export class MainPageComponent {
   }
 
   ngAfterViewInit(): void {
-    
+    const nav = document.getElementById("nav-icon3");
+    this.renderer.listen(nav, 'click', () => {
+      this.toggleMenu();
+    });
   }
 
   private setIsMobile() {
@@ -47,7 +50,13 @@ export class MainPageComponent {
   }
 
   public toggleMenu() {
-      this.isOpenMenu = !this.isOpenMenu;
+    let nav = document.getElementById("nav-icon3");
+    this.isOpenMenu = !this.isOpenMenu;
+    if (this.isOpenMenu) {
+      this.renderer.addClass(nav, 'open');
+    } else {
+      this.renderer.removeClass(nav, 'open');
+    }
   }
 
   onChangeLanguage(language: string): void {
@@ -142,7 +151,6 @@ export class MainPageComponent {
 
   onThemeSwitchChange() {
     this.isLightTheme = !this.isLightTheme;
-
     document.body.setAttribute(
       'data-theme',
       this.isLightTheme ? 'light' : 'dark'
