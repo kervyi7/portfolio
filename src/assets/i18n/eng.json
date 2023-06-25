@@ -8,7 +8,7 @@
         "DEVELOPER": "I’m Front-end developer"
     },
     "ABOUT": {
-        "INTRO": "I'm budding front-end developer with a passion for creating beautiful and intuitive web applications.  I am always eager to learn from experienced professionals and contribute to projects that make a meaningful impact.",
+        "INTRO": "I'm budding front-end developer with a passion for creating beautiful and intuitive web applications.  I am always eager to learn from experienced professionals and contribute to projects.",
         "BEGIN": "at the beginning",
         "NOW": "now",
         "FUTURE": "in the future",
@@ -31,9 +31,9 @@
         "LANGUAGES": "create an choice of languages",
         "LAYOUTS": "create adaptive and semantic layouts",
         "THEMES": "create themes",
-        "STUDYIND": "I want to learn:",
+        "STUDYIND": "I want to learn how to:",
         "SCSS": "use SCSS and SASS",
-        "CLEAR_CODE": "writing clear code",
+        "CLEAR_CODE": "write clear code",
         "DIFFICULT_ANIMATIONS": "create more difficult animations",
         "BACKEND": "write back-end with Java"
     },
