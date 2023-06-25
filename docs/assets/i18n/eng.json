@@ -1,0 +1,50 @@
+{
+    "HEADER": {
+        "ABOUT": "About me",
+        "SKILLS": "Skills",
+        "PROJECTS": "Projects",
+        "HI": "Hi!",
+        "NAME": "My name’s Yevheniia",
+        "DEVELOPER": "I’m Front-end developer"
+    },
+    "ABOUT": {
+        "INTRO": "I'm budding front-end developer with a passion for creating beautiful and intuitive web applications.  I am always eager to learn from experienced professionals and contribute to projects that make a meaningful impact.",
+        "BEGIN": "at the beginning",
+        "NOW": "now",
+        "FUTURE": "in the future",
+        "BEGIN_TEXT": "My path in web development started as an informal intern at a company in Kyiv. During this experience, I gained hands-on experience in the industry, working closely with professionals who helped me hone my skills. I tried different directions: Front-end, Back-end, Android. This opportunity gave me valuable hands-on experience and a solid foundation.",
+        "NOW_TEXT": "As a student, I’m committed to expanding my knowledge and staying up to date with the latest trends and technologies. I am dedicated to continuous learning and pushing myself to grow both technically and creatively. In addition to my technical skills, I am a highly motivated and diligent individual who values teamwork and collaborion. ",
+        "FUTURE_TEXT": "I will always strive to learn from experienced professionals and develop myself in order to perform tasks even more effectively.",
+        "LOCATION": "Location: Warsaw, Poland",
+        "LANGUAGES": "Languages: Ukrainian, Polish, English",
+        "EDUCATION": "Education: middle school, Vistula University (2022-present)",
+        "OPEN_TO_WORK": "Open to work: Available"
+    },
+
+    "SKILLS": {
+        "INTRO": "With a strong focus on front-end development, I possess proficiency in HTML, CSS, and JavaScript. All of my projects were developed with Angular 8+. I strive to create visually appealing and user-friendly websites that offer seamless and engaging experiences for users. Additionally, I have experience working with Figma and Photoshop for web design. For version control, I am familiar with Git and Azure and have knowledge of basic commands.",
+        "ALSO_I_CAN": "Also, i can:",
+        "LIBRARIES": "use libraries like bootstrap and angular modules",
+        "ROUTING": "create routing in application",
+        "FORMS": "create sign-in and sign-up forms",
+        "ANIMATIONS": "create simple animations",
+        "LANGUAGES": "create an choice of languages",
+        "LAYOUTS": "create adaptive and semantic layouts",
+        "THEMES": "create themes",
+        "STUDYIND": "I want to learn:",
+        "SCSS": "use SCSS and SASS",
+        "CLEAR_CODE": "writing clear code",
+        "DIFFICULT_ANIMATIONS": "create more difficult animations",
+        "BACKEND": "write back-end with Java"
+    },
+
+    "PROJECTS": {
+        "DESCRIPTION": "description",
+        "ALL_PROJECTS": "All of my projects can be seen",
+        "HERE": "here"
+    },
+
+    "FOOTER": {
+        "HOME": "Home"
+    }
+}
