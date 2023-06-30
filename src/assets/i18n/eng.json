@@ -5,7 +5,7 @@
         "PROJECTS": "Projects",
         "HI": "Hi!",
         "NAME": "My name’s Yevheniia",
-        "DEVELOPER": "I’m Front-end developer"
+        "DEVELOPER": "I’m front-end developer"
     },
     "ABOUT": {
         "INTRO": "I'm budding front-end developer with a passion for creating beautiful and intuitive web applications.  I am always eager to learn from experienced professionals and contribute to projects.",
@@ -34,12 +34,16 @@
         "STUDYIND": "I want to learn how to:",
         "SCSS": "use SCSS and SASS",
         "CLEAR_CODE": "write clear code",
-        "DIFFICULT_ANIMATIONS": "create more difficult animations",
-        "BACKEND": "write back-end with Java"
+        "DIFFICULT_ANIMATIONS": "create more difficult animations"
     },
 
     "PROJECTS": {
-        "DESCRIPTION": "description",
+        "TECHNOLOGIES_SKYCALL": "Technologies: Angular, HTML, CSS, TS. \n\r",
+        "TECHNOLOGIES_ITPOWER": "Technologies: Angular, HTML, CSS, TS. \n\r",
+        "TECHNOLOGIES_INNET": "Technologies: Angular, HTML, SCSS, TS. \n\r",
+        "DESCRIPTION_SKYCALL": "It was a landing page where I was learning how to to create simple elements within the framework. I gained experience working with client and following instructions from project manager.",
+        "DESCRIPTION_ITPOWER": "It is a landing page where I consolidated my knowledge and learned how to create an adaptive site based on design. Additionally, I'm pleased to mention that the project is currently operational.",
+        "DESCRIPTION_INNET": "It is an unfinished pet project where I collaborated with a back-end developer to create a social network. During this project, I learned how to create sign-up and sign-in forms and gained experience working with queries.",
         "ALL_PROJECTS": "All of my projects can be seen",
         "HERE": "here"
     },

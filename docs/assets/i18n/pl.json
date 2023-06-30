@@ -5,7 +5,7 @@
         "PROJECTS": "Projekty",
         "HI": "Cześć!",
         "NAME": "Mam na imię Yevheniia",
-        "DEVELOPER": "Jestem Front-end developerem"
+        "DEVELOPER": "Jestem front-end developerem"
     },
     "ABOUT": {
         "INTRO": "Jestem początkującym programistą front-end z pasją do tworzenia pięknych i intuicyjnych aplikacji internetowych. Zawsze chętnie uczę się od doświadczonych profesjonalistów i uczestniczę w projektach.",
@@ -33,15 +33,19 @@
         "STUDYIND": "Chciałabym nauczyć się:",
         "SCSS": "używać SCSS i SASS",
         "CLEAR_CODE": "pisać przejrzystego kodu",
-        "DIFFICULT_ANIMATIONS": "tworzyć trudniejsze animacje",
-        "BACKEND": "pisać back-end w Java"
+        "DIFFICULT_ANIMATIONS": "tworzyć trudniejsze animacje"
     },
     "PROJECTS": {
-        "DESCRIPTION": "opis",
+        "TECHNOLOGIES_SKYCALL": "Technologie: Angular, HTML, CSS, TS. \n\r",
+        "TECHNOLOGIES_ITPOWER": "Technologie: Angular, HTML, CSS, TS. \n\r",
+        "TECHNOLOGIES_INNET": "Technologie: Angular, HTML, SCSS, TS. \n\r",
+        "DESCRIPTION_SKYCALL": "Jest to landing page, na którym uczyłam się tworzyć proste elementy w frameworku. Zdobyłam doświadczenie pracując z klientem i wykonując polecenia kierownika projektu.",
+        "DESCRIPTION_ITPOWER": "Jest to landing page, na którym ugruntowałam swoją wiedzę i nauczyłam się tworzyć stronę adaptacyjną w oparciu o design. Ponadto z przyjemnością informuję, że projekt jest obecnie w fazie operacyjnej.",
+        "DESCRIPTION_INNET": "Jest to projekt edukacyjny, w którym współpracowałam z back-end programistą, aby stworzyć sieć społecznościową. Podczas tego projektu nauczyłam się tworzyć formularze rejestracji i logowania oraz zdobyłam doświadczenie w obsłudze zgłoszeń.",
         "ALL_PROJECTS": "Wszystkie moje projekty można zobaczyć",
         "HERE": "tutaj"
     },
     "FOOTER": {
-        "HOME": "główna"
+        "HOME": "Główna"
     }
 }

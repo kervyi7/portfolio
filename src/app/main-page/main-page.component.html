@@ -100,7 +100,7 @@
                     {{ 'ABOUT.OPEN_TO_WORK' | translate }}
                 </p>
             </div>
-            <img class="image" src="assets/img/me.jpeg">
+            <img class="image" src="assets/img/me.jpeg" alt="my photo">
         </div>
     </section>
     <section #skillsRef>
@@ -152,9 +152,6 @@
                         <li>
                             {{ 'SKILLS.DIFFICULT_ANIMATIONS' | translate }}
                         </li>
-                        <li>
-                            {{ 'SKILLS.BACKEND' | translate }}
-                        </li>
                     </ul>
                 </div>
                 <div class="flex skill-buttons">
@@ -171,7 +168,7 @@
                         <button class="skill-button">Figma</button>
                     </div>
                     <div class="flex" [ngClass]="{ 'column': !isMobile, 'skill-buttons-mobile': isMobile }">
-                        <button class="skill-button">Photoshop</button>
+                        <button class="skill-button">Bootstrap</button>
                         <button class="skill-button">Git</button>
                     </div>
                 </div>
@@ -184,27 +181,50 @@
         </h2>
         <div class="section-params">
             <div class="flex text-image-container">
-                <div class="flex column">
-                    <img class="image" src="assets/img/skycall-screen.png">
+                <div class="flex column project-width">
+                    <a href="https://github.com/kervyi7/skycall" target="_blank"><img class="image"
+                            src="assets/img/skycall-screen.png" alt="skycall project image"></a>
+                    <p class="text project-align">
+                        SkyCall
+                    </p>
                     <p class="text description">
-                        {{ 'PROJECTS.DESCRIPTION' | translate }}
+                        {{ 'PROJECTS.TECHNOLOGIES_SKYCALL' | translate }}
+                    </p>
+                    <p class="text description">
+                        {{ 'PROJECTS.DESCRIPTION_SKYCALL' | translate }}
                     </p>
                 </div>
-                <div class="flex column">
-                    <img class="image" src="assets/img/itpower-screen.png">
+                <div class="flex column project-width">
+                    <a href="https://github.com/kervyi7/itpower" target="_blank"><img class="image"
+                            src="assets/img/itpower-screen.png" alt="itpower project image"></a>
+                    <p class="text project-align">
+                        ITPower
+                    </p>
                     <p class="text description">
-                        {{ 'PROJECTS.DESCRIPTION' | translate }}
+                        {{ 'PROJECTS.TECHNOLOGIES_ITPOWER' | translate }}
+                    </p>
+                    <p class="text description">
+                        {{ 'PROJECTS.DESCRIPTION_ITPOWER' | translate }}
+                        <a href="https://itpower.com.ua/" target="_blank">ITPower</a>
                     </p>
                 </div>
-                <div class="flex column">
-                    <img class="image" src="assets/img/innet-screen.png">
+                <div class="flex column project-width">
+                    <a href="https://github.com/kervyi7/innet" target="_blank"><img class="image"
+                            src="assets/img/innet-screen.png" alt="innet project image"></a>
+                    <p class="text project-align">
+                        Innet
+                    </p>
                     <p class="text description">
-                        {{ 'PROJECTS.DESCRIPTION' | translate }}
+                        {{ 'PROJECTS.TECHNOLOGIES_INNET' | translate }}
+                    </p>
+                    <p class="text description">
+                        {{ 'PROJECTS.DESCRIPTION_INNET' | translate }}
                     </p>
                 </div>
             </div>
-            <p class="text project-link">
-                {{ 'PROJECTS.ALL_PROJECTS' | translate }} <a>{{ 'PROJECTS.HERE' | translate }}</a>
+            <p class="text project-align">
+                {{ 'PROJECTS.ALL_PROJECTS' | translate }} <a href="https://github.com/kervyi7" target="_blank">{{
+                    'PROJECTS.HERE' | translate }}</a>
             </p>
         </div>
     </section>
@@ -217,7 +237,15 @@
                             E-mail:
                         </td>
                         <td>
-                            evg201104@gmail.com
+                            <a href="mailto:evg201104@gmail.com">evg201104@gmail.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Github:
+                        </td>
+                        <td>
+                            <a href="https://github.com/kervyi7" target="_blank">kervyi7</a>
                         </td>
                     </tr>
                     <tr>
@@ -226,14 +254,6 @@
                         </td>
                         <td>
                             @kervyi
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Github:
-                        </td>
-                        <td>
-                            kervyi7
                         </td>
                     </tr>
                 </table>

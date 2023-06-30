@@ -93,6 +93,14 @@ button {
 
 .column {
     flex-direction: column;
+
+    .image {
+        width: max(10vw, 400px);
+        height: fit-content;
+        box-shadow: 0px 0px 20px 10px var(--shadow);
+        margin: 0;
+        transition: width 1s;
+    }
 }
 
 .section-params {
@@ -218,12 +226,22 @@ footer {
 a {
     text-decoration: underline;
     cursor: pointer;
-}
-
-.project-link {
-    text-align: center;
     color: var(--link-color);
 }
+
+.project-align {
+    text-align: center;
+}
+
+.project-width {
+    width: max(10vw, 400px);
+
+    p {
+        margin-block-start: 0.5em;  
+        margin-block-end: 0.5em;
+    }
+}
+
 
 @media screen and (orientation: landscape) {
     nav {
@@ -259,25 +277,13 @@ a {
         border-radius: 8px;
     }
 
-    .column {
-        flex-direction: column;
-
-        .image {
-            width: max(10vw, 400px);
-            height: fit-content;
-            box-shadow: 0px 0px 20px 10px var(--shadow);
-            margin: 0;
-            transition: width 1s;
-        }
-
-        .image:hover {
-            width: max(15vw, 500px);
-        }
+    .image:hover {
+        width: max(15vw, 500px);
     }
+}
 
-    footer {
-        margin-top: -16.2vh;
-    }
+footer {
+    margin-top: -16.2vh;
 }
 
 @media screen and (orientation: portrait) {
@@ -350,6 +356,7 @@ a {
     .project-link {
         margin-block-end: 0;
     }
+
     .text-image-container div {
         width: 96vw;
         margin: auto;
