@@ -234,11 +234,12 @@ a {
 }
 
 .project-width {
-    width: max(10vw, 400px);
+    transition: width 0.5s;
 
     p {
-        margin-block-start: 0.5em;  
-        margin-block-end: 0.5em;
+        padding: 0.5em 0;
+        width: max(10vw, 400px);
+        margin: auto;
     }
 }
 
@@ -277,8 +278,10 @@ a {
         border-radius: 8px;
     }
 
-    .image:hover {
-        width: max(15vw, 500px);
+    .project-width:hover {
+        img {
+            width: max(12vw, 430px);
+        }
     }
 }
 
