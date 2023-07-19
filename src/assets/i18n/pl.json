@@ -5,10 +5,10 @@
         "PROJECTS": "Projekty",
         "HI": "Cześć!",
         "NAME": "Mam na imię Yevheniia",
-        "DEVELOPER": "Jestem front-end developerem"
+        "DEVELOPER": "Jestem Frontend developerem"
     },
     "ABOUT": {
-        "INTRO": "Jestem początkującym programistą front-end z pasją do tworzenia pięknych i intuicyjnych aplikacji internetowych. Zawsze chętnie uczę się od doświadczonych profesjonalistów i uczestniczę w projektach.",
+        "INTRO": "Jestem początkującym programistą Frontend z pasją do tworzenia pięknych i intuicyjnych aplikacji internetowych. Zawsze chętnie uczę się od doświadczonych profesjonalistów i uczestniczę w projektach.",
         "BEGIN": "na początku",
         "NOW": "teraz",
         "FUTURE": "w przyszłości",
@@ -21,7 +21,7 @@
         "OPEN_TO_WORK": "Otwarta na pracę: Tak"
     },
     "SKILLS": {
-        "INTRO": "Z silnym naciskiem na programowanie front-end, posiadam biegłość w HTML, CSS i JavaScript. Wszystkie moje projekty powstały w Angular 8+. Staram się tworzyć atrakcyjne wizualnie i przyjazne dla użytkownika strony internetowe, które zapewniają bezproblemowe i wciągające wrażenia dla użytkowników. Dodatkowo mam doświadczenie w pracy z Figmą i Photoshopem do projektowania stron internetowych. Jeśli chodzi o kontrolę wersji, jestem zaznajomioną z Git i Azure oraz znam podstawowe polecenia.",
+        "INTRO": "Z silnym naciskiem na programowanie Frontend, posiadam biegłość w HTML, CSS i JavaScript. Wszystkie moje projekty powstały w Angular 8+. Staram się tworzyć atrakcyjne wizualnie i przyjazne dla użytkownika strony internetowe, które zapewniają bezproblemowe i wciągające wrażenia dla użytkowników. Dodatkowo mam doświadczenie w pracy z Figmą i Photoshopem do projektowania stron internetowych. Jeśli chodzi o kontrolę wersji, jestem zaznajomioną z Git i Azure oraz znam podstawowe polecenia.",
         "ALSO_I_CAN": "Poza tym mogę:",
         "LIBRARIES": "używać bibliotek, takich jak bootstrap i angular modules",
         "ROUTING": "tworzyć routing w aplikacji",
@@ -41,7 +41,7 @@
         "TECHNOLOGIES_INNET": "Technologie: Angular, HTML, SCSS, TS. \n\r",
         "DESCRIPTION_SKYCALL": "Jest to landing page, na którym uczyłam się tworzyć proste elementy w frameworku. Zdobyłam doświadczenie pracując z klientem i wykonując polecenia kierownika projektu.",
         "DESCRIPTION_ITPOWER": "Jest to landing page, na którym ugruntowałam swoją wiedzę i nauczyłam się tworzyć stronę adaptacyjną w oparciu o design. Ponadto z przyjemnością informuję, że projekt jest obecnie w fazie operacyjnej.",
-        "DESCRIPTION_INNET": "Jest to projekt edukacyjny, w którym współpracowałam z back-end programistą, aby stworzyć sieć społecznościową. Podczas tego projektu nauczyłam się tworzyć formularze rejestracji i logowania oraz zdobyłam doświadczenie w obsłudze zgłoszeń.",
+        "DESCRIPTION_INNET": "Jest to projekt edukacyjny, w którym współpracowałam z Backend programistą, aby stworzyć sieć społecznościową. Podczas tego projektu nauczyłam się tworzyć formularze rejestracji i logowania oraz zdobyłam doświadczenie w obsłudze zgłoszeń.",
         "ALL_PROJECTS": "Wszystkie moje projekty można zobaczyć",
         "HERE": "tutaj"
     },

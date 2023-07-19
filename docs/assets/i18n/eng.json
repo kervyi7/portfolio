@@ -5,10 +5,10 @@
         "PROJECTS": "Projects",
         "HI": "Hi!",
         "NAME": "My name’s Yevheniia",
-        "DEVELOPER": "I’m front-end developer"
+        "DEVELOPER": "I’m Frontend developer"
     },
     "ABOUT": {
-        "INTRO": "I'm budding front-end developer with a passion for creating beautiful and intuitive web applications.  I am always eager to learn from experienced professionals and contribute to projects.",
+        "INTRO": "I'm budding Frontend developer with a passion for creating beautiful and intuitive web applications.  I am always eager to learn from experienced professionals and contribute to projects.",
         "BEGIN": "at the beginning",
         "NOW": "now",
         "FUTURE": "in the future",
@@ -22,7 +22,7 @@
     },
 
     "SKILLS": {
-        "INTRO": "With a strong focus on front-end development, I possess proficiency in HTML, CSS, and JavaScript. All of my projects were developed with Angular 8+. I strive to create visually appealing and user-friendly websites that offer seamless and engaging experiences for users. Additionally, I have experience working with Figma and Photoshop for web design. For version control, I am familiar with Git and Azure and have knowledge of basic commands.",
+        "INTRO": "With a strong focus on Frontend development, I possess proficiency in HTML, CSS, and JavaScript. All of my projects were developed with Angular 8+. I strive to create visually appealing and user-friendly websites that offer seamless and engaging experiences for users. Additionally, I have experience working with Figma and Photoshop for web design. For version control, I am familiar with Git and Azure and have knowledge of basic commands.",
         "ALSO_I_CAN": "Also, I can:",
         "LIBRARIES": "use libraries like bootstrap and angular modules",
         "ROUTING": "create routing in application",
@@ -43,7 +43,7 @@
         "TECHNOLOGIES_INNET": "Technologies: Angular, HTML, SCSS, TS. \n\r",
         "DESCRIPTION_SKYCALL": "It was a landing page where I was learning how to to create simple elements within the framework. I gained experience working with client and following instructions from project manager.",
         "DESCRIPTION_ITPOWER": "It is a landing page where I consolidated my knowledge and learned how to create an adaptive site based on design. Additionally, I'm pleased to mention that the project is currently operational.",
-        "DESCRIPTION_INNET": "It is an unfinished pet project where I collaborated with a back-end developer to create a social network. During this project, I learned how to create sign-up and sign-in forms and gained experience working with queries.",
+        "DESCRIPTION_INNET": "It is an unfinished pet project where I collaborated with a Backend developer to create a social network. During this project, I learned how to create sign-up and sign-in forms and gained experience working with queries.",
         "ALL_PROJECTS": "All of my projects can be seen",
         "HERE": "here"
     },
