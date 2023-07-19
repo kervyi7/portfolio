@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, NgZone, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgZone, Renderer2, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class MainPageComponent {
   @ViewChild('textLine') textLine!: ElementRef;
 
-  private _texts: string[] = ['Hi!', 'My name’s Yevheniia', 'I’m Front-end developer'];
+  private _texts: string[] = ['Hi!', 'My name’s Yevheniia', 'I’m Frontend developer'];
   private _currentIndex = 0;
   private _timeouts: any[] = [];
   private _intervals: any[] = [];
@@ -21,9 +21,6 @@ export class MainPageComponent {
   constructor(public translate: TranslateService, private ngZone: NgZone, private renderer: Renderer2) {
     translate.addLangs(['eng', 'pl', 'ua']);
     translate.setDefaultLang('eng');
-    this.ngZone.runOutsideAngular(() => {
-      window.addEventListener('wheel', this.onWheel, { passive: false });
-    });
     this.setIsMobile();
   }
 
@@ -68,21 +65,6 @@ export class MainPageComponent {
     }
     if (language == 'pl') {
       this.translate.setDefaultLang('pl');
-    }
-  }
-
-  onWheel(event: WheelEvent): void {
-    event.preventDefault(); // Prevent default scroll behavior
-
-    const deltaY = event.deltaY;
-    const scrollAmount = window.innerHeight; // Scroll amount equal to viewport height
-
-    if (deltaY > 0) {
-      // Scroll down by scrollAmount
-      window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
-    } else if (deltaY < 0) {
-      // Scroll up by scrollAmount
-      window.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
     }
   }
 
