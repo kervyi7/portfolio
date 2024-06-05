@@ -1,0 +1,25 @@
+.project {
+  width: 30vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  a {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .image {
+    width: 30vw;
+    height: calc((9* max(300px, 30vw)) / 16);
+    min-width: 300px;
+    pointer-events: none;
+    object-fit: cover;
+    box-shadow: 0px 0px 12px 4px var(--shadow);
+  }
+
+  h3 {
+    text-align: center;
+  }
+}

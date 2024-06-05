@@ -1,0 +1,89 @@
+{
+  "email": "evg201104@gmail.com",
+  "telegram": "kervyi",
+  "github": "kervyi7",
+  "linkedIn": "https://www.linkedin.com/in/yevheniia-pytalova-2b2197282/",
+  "projectsCount": "5",
+  "languages": [
+    {
+      "title": "TS",
+      "icon": "assets/img/icons/ts.svg"
+    },
+    {
+      "title": "JS",
+      "icon": "assets/img/icons/js.svg"
+    },
+    {
+      "title": "Angular",
+      "icon": "assets/img/icons/angular.svg"
+    },
+    {
+      "title": "PrimeNG",
+      "icon": "assets/img/icons/primeng.svg"
+    },
+    {
+      "title": "Angular Material",
+      "icon": "assets/img/icons/material.svg"
+    },
+    {
+      "title": "Bootstrap",
+      "icon": "assets/img/icons/bootstrap.svg"
+    },
+    {
+      "title": "HTML",
+      "icon": "assets/img/icons/html.svg"
+    },
+    {
+      "title": "CSS",
+      "icon": "assets/img/icons/css.svg"
+    },
+    {
+      "title": "SCSS",
+      "icon": "assets/img/icons/scss.svg"
+    },
+    {
+      "title": "Git",
+      "icon": "assets/img/icons/git.svg"
+    },
+    {
+      "title": "Karma",
+      "icon": "assets/img/icons/karma.svg"
+    },
+    {
+      "title": "Figma",
+      "icon": "assets/img/icons/figma.svg"
+    }
+  ],
+  "projects": [
+    {
+      "link": "https://github.com/kervyi7/skycall",
+      "image": "assets/img/skycall-screen.png",
+      "title": "SkyCall",
+      "technologies": "Angular, HTML, CSS, Angular Material"
+    },
+    {
+      "link": "https://github.com/kervyi7/itpower",
+      "image": "assets/img/itpower-screen.png",
+      "title": "ITPower",
+      "technologies": "Angular, HTML, CSS"
+    },
+    {
+      "link": "https://github.com/kervyi7/innet",
+      "image": "assets/img/innet-screen.png",
+      "title": "Innet",
+      "technologies": "Angular, HTML, SCSS, Angular Material"
+    },
+    {
+      "link": "https://github.com/kervyi7/mailbox",
+      "image": "assets/img/mailbox-screen.png",
+      "title": "MailBox",
+      "technologies": "Angular, HTML, SCSS, ASP.NET Core Web API"
+    },
+    {
+      "link": "https://github.com/kervyi7/mailbox",
+      "image": "assets/img/sms-screen.png",
+      "title": "Sms Server",
+      "technologies": "Angular, HTML, CSS, Bootstrap"
+    }
+  ]
+}

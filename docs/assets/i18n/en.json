@@ -1,0 +1,23 @@
+{
+  "HEADER": {
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "HI": "Hi!",
+    "NAME": "My name is Yevheniia",
+    "DEVELOPER": "I am Front-end developer"
+  },
+  "ABOUT": {
+    "ABOUT_ME": "I am a creative young person, calm, confident, naturally curious, and perpetually working on improving my chops. I have various interests in my free time, including music, graphics, reading. However, my true passion lies in the realm of technology. I am Frontend developer because I find it incredibly captivating. I like to craft innovative and user-friendly websites and applications.",
+    "LOCATION": "Location: Warsaw, Poland",
+    "LANGUAGES": "Languages: Ukrainian, Polish, English",
+    "EDUCATION": "Education: Vistula University in Warsaw (2022-present) Engineering of Internet Technologies"
+  },
+  "PROJECTS": {
+    "ALT_IMAGE": "project image",
+    "HERE": "Open Github to see more"
+  },
+  "FOOTER": {
+    "HOME": "Home"
+  }
+}

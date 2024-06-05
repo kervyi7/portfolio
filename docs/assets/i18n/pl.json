@@ -1,51 +1,23 @@
 {
-    "HEADER": {
-        "ABOUT": "O mnie",
-        "SKILLS": "Umiejętności",
-        "PROJECTS": "Projekty",
-        "HI": "Cześć!",
-        "NAME": "Mam na imię Yevheniia",
-        "DEVELOPER": "Jestem Frontend developerem"
-    },
-    "ABOUT": {
-        "INTRO": "Jestem początkującym programistą Frontend z pasją do tworzenia pięknych i intuicyjnych aplikacji internetowych. Zawsze chętnie uczę się od doświadczonych profesjonalistów i uczestniczę w projektach.",
-        "BEGIN": "na początku",
-        "NOW": "teraz",
-        "FUTURE": "w przyszłości",
-        "BEGIN_TEXT": "Moja droga w tworzeniu stron internetowych rozpoczęła się jako freelancer. W tym czasie opracowałam trzy projekty dla klienta i nauczyłam się tworzyć strony internetowe według wcześniej ustalonego projektu i pisać dla nich trochę logiki, a także koordynować subtelności z klientem. Ta możliwość dała mi cenne praktyczne doświadczenie i solidne podstawy. Poza tym byłam na stażu w kijowskiej firmie, gdzie robiłam swój własny mały projekt, czasami byłam przyjmowany do zespołu deweloperskiego projektu firmy, w którym robiłam proste i nieskomplikowane rzeczy.",
-        "NOW_TEXT": "Jako student z zaangażowaniem poszerzam swoją wiedzę i jestem na bieżąco z najnowszymi trendami i technologiami. Jestem oddaną ciągłemu uczeniu się i dążeniu do rozwoju zarówno technicznego, jak i kreatywnego. Oprócz moich umiejętności technicznych jestem wysoce zmotywowaną i pracowitą osobą, która ceni pracę zespołową i współpracę.",
-        "FUTURE_TEXT": "Zawsze będę dążyła do uczenia się od doświadczonych fachowców i rozwijania się, aby jeszcze skuteczniej wykonywać zadania.",
-        "LOCATION": "Lokalizacja: Warszawa, Polska",
-        "LANGUAGES": "Języki: ukraiński, polski, angielski",
-        "EDUCATION": "Wykształcenie: skoła średnia, Uczelnia Vistula (2022-obecnie)",
-        "OPEN_TO_WORK": "Otwarta na pracę: Tak"
-    },
-    "SKILLS": {
-        "INTRO": "Z silnym naciskiem na programowanie Frontend, posiadam biegłość w HTML, CSS i JavaScript. Wszystkie moje projekty powstały w Angular 8+. Staram się tworzyć atrakcyjne wizualnie i przyjazne dla użytkownika strony internetowe, które zapewniają bezproblemowe i wciągające wrażenia dla użytkowników. Dodatkowo mam doświadczenie w pracy z Figmą i Photoshopem do projektowania stron internetowych. Jeśli chodzi o kontrolę wersji, jestem zaznajomioną z Git i Azure oraz znam podstawowe polecenia.",
-        "ALSO_I_CAN": "Poza tym mogę:",
-        "LIBRARIES": "używać bibliotek, takich jak bootstrap i angular modules",
-        "ROUTING": "tworzyć routing w aplikacji",
-        "FORMS": "tworzyć formularze logowania i rejestracji",
-        "ANIMATIONS": "tworzyć proste animacje",
-        "LANGUAGES": "stworzyć wybór języków",
-        "LAYOUTS": "tworzyć układy adaptacyjne i semantyczne",
-        "THEMES": "tworzyć motywy kolorystyczne",
-        "STUDYIND": "Chciałabym nauczyć się:",
-        "SCSS": "używać SCSS i SASS",
-        "CLEAR_CODE": "pisać przejrzystego kodu",
-        "DIFFICULT_ANIMATIONS": "tworzyć trudniejsze animacje"
-    },
-    "PROJECTS": {
-        "TECHNOLOGIES_SKYCALL": "Technologie: Angular, HTML, CSS, TS. \n\r",
-        "TECHNOLOGIES_ITPOWER": "Technologie: Angular, HTML, CSS, TS. \n\r",
-        "TECHNOLOGIES_INNET": "Technologie: Angular, HTML, SCSS, TS. \n\r",
-        "DESCRIPTION_SKYCALL": "Jest to landing page, na którym uczyłam się tworzyć proste elementy w frameworku. Zdobyłam doświadczenie pracując z klientem i wykonując polecenia kierownika projektu.",
-        "DESCRIPTION_ITPOWER": "Jest to landing page, na którym ugruntowałam swoją wiedzę i nauczyłam się tworzyć stronę adaptacyjną w oparciu o design. Ponadto z przyjemnością informuję, że projekt jest obecnie w fazie operacyjnej.",
-        "DESCRIPTION_INNET": "Jest to projekt edukacyjny, w którym współpracowałam z Backend programistą, aby stworzyć sieć społecznościową. Podczas tego projektu nauczyłam się tworzyć formularze rejestracji i logowania oraz zdobyłam doświadczenie w obsłudze zgłoszeń.",
-        "ALL_PROJECTS": "Wszystkie moje projekty można zobaczyć",
-        "HERE": "tutaj"
-    },
-    "FOOTER": {
-        "HOME": "Główna"
-    }
+  "HEADER": {
+    "ABOUT": "O mnie",
+    "SKILLS": "Umiejętności",
+    "PROJECTS": "Projekty",
+    "HI": "Cześć!",
+    "NAME": "Mam na imię Yevheniia",
+    "DEVELOPER": "Jestem Front-end deweloperką"
+  },
+  "ABOUT": {
+    "ABOUT_ME": "Jestem kreatywną młodą osobą, spokojną, pewną siebie, naturalnie ciekawską i nieustannie pracującą nad doskonaleniem swoich umiejętności. W wolnym czasie mam różne zainteresowania, w tym muzykę, grafikę, czytanie. Jednak prawdziwą pasją jest dla mnie technologia. Jestem deweloperką Frontend, ponieważ uważam to za niezwykle fascynujące. Lubię tworzyć innowacyjne i przyjazne dla użytkownika strony i aplikacje.",
+    "LOCATION": "Lokalizacja: Warszawa, Polska",
+    "LANGUAGES": "Języki: Ukraiński, Polski, Angielski",
+    "EDUCATION": "Wykształcenie: Uniwersytet Vistula w Warszawie (2022-obecnie) Inżynieria Technologii Internetowych"
+  },
+  "PROJECTS": {
+    "ALT_IMAGE": "obraz projektu",
+    "HERE": "Otwórz Github, aby zobaczyć więcej"
+  },
+  "FOOTER": {
+    "HOME": "Strona główna"
+  }
 }

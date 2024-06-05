@@ -1,141 +1,182 @@
-import { Component, ElementRef, NgZone, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { IAppConfig, IProject } from '../interfaces/app-config';
+import { AppConfigService } from '../services/app-config.service';
+import { Subject, fromEvent, takeUntil } from 'rxjs';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss', './hamburger.scss']
+  styleUrls: ['./main-page.component.scss', '../../assets/styles/hamburger.scss', '../../assets/styles/waves.scss']
 })
-export class MainPageComponent {
-  @ViewChild('textLine') textLine!: ElementRef;
+export class MainPageComponent implements OnInit, AfterViewInit {
+  @ViewChild('projectsContainer') projectsContainer!: ElementRef;
 
-  private _texts: string[] = ['Hi!', 'My name’s Yevheniia', 'I’m Frontend developer'];
+  @HostListener('window:resize')
+  public onResize(): void {
+    this.isMobile = this.isMobileResolution(window.innerWidth);
+  }
+
+  @HostListener('mouseup', ['$event'])
+  public mouseUpHandler(e: MouseEvent) {
+    e.stopPropagation();
+    this.mouseDown = false;
+  }
+
+  private _texts = ['Hi!', 'My name is Yevheniia', `I'm Front-end developer`];
   private _currentIndex = 0;
   private _timeouts: any[] = [];
-  private _intervals: any[] = [];
+  private _pos = { top: 0, left: 0, x: 0, y: 0 };
+  private _unsubscribe$ = new Subject<void>();
+  public mouseDown = false;
   public isLightTheme = false;
-  public showNextComponent: boolean = false;
+  public showNextComponent = false;
   public isMobile = false;
   public isOpenMenu = false;
+  public helloText = '';
+  public config: IAppConfig;
+  public projects: IProject[] = [];
 
-  constructor(public translate: TranslateService, private ngZone: NgZone, private renderer: Renderer2) {
-    translate.addLangs(['eng', 'pl', 'ua']);
-    translate.setDefaultLang('eng');
-    this.setIsMobile();
+  constructor(private _translate: TranslateService,
+    private _appConfigService: AppConfigService,
+    private _scroller: ViewportScroller) {
+    this.config = _appConfigService.config;
+    _translate.addLangs(['en', 'pl, ua']);
+    _translate.setDefaultLang('en');
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     const typeTimeout = setTimeout(() => {
       this.typeLines();
-    }, 1000);
-
+    }, 500);
     this._timeouts.push(typeTimeout);
+    this.isMobile = this.isMobileResolution(window.innerWidth);
+    for (let i = 0; i < this.config.projectsCount; i++) {
+      const item = {
+        image: this.config.projects[i].image,
+        link: this.config.projects[i].link,
+        title: this.config.projects[i].title,
+        technologies: this.config.projects[i].technologies,
+        text: `PROJECTS.DESCRIPTION${i + 1}`
+      };
+      this.projects.push(item);
+    }
   }
 
-  ngAfterViewInit(): void {
-    const nav = document.getElementById("nav-icon3");
-    this.renderer.listen(nav, 'click', () => {
-      this.toggleMenu();
+  public ngAfterViewInit(): void {
+    fromEvent<MouseEvent>(this.projectsContainer.nativeElement, 'mousedown').pipe(takeUntil(this._unsubscribe$)).subscribe((e: MouseEvent) => {
+      e.stopPropagation();
+      this.mouseDown = true;
+      this._pos = {
+        left: this.projectsContainer.nativeElement.scrollLeft,
+        top: this.projectsContainer.nativeElement.scrollTop,
+        x: e.clientX,
+        y: e.clientY,
+      };
+      fromEvent<MouseEvent>(this.projectsContainer.nativeElement, 'mousemove').pipe(takeUntil(this._unsubscribe$)).subscribe((e: MouseEvent) => {
+        e.stopPropagation();
+        if (this.mouseDown) {
+          const dx = e.clientX - this._pos.x;
+          const dy = e.clientY - this._pos.y;
+          this.projectsContainer.nativeElement.scrollTop = this._pos.top - dy;
+          this.projectsContainer.nativeElement.scrollLeft = this._pos.left - dx;
+        }
+      });
     });
   }
 
-  private setIsMobile() {
-    let screen = window.screen;
-    this.ngZone.run(() => {
-      this.isMobile = screen.height > screen.width;
-    });
+  public timeout() {
+    setTimeout(() => {
+      this.projectsContainer.nativeElement.scroll({
+        left: 300,
+        behavior: "smooth",
+      });
+      this.timeout();
+    }, 10);
+    debugger
   }
 
-  public toggleMenu() {
-    let nav = document.getElementById("nav-icon3");
-    this.isOpenMenu = !this.isOpenMenu;
+  public scrollTo(target: string) {
     if (this.isOpenMenu) {
-      this.renderer.addClass(nav, 'open');
-    } else {
-      this.renderer.removeClass(nav, 'open');
+      this.toggleMenu();
     }
+    this._scroller.scrollToAnchor(target);
   }
 
-  onChangeLanguage(language: string): void {
-    if (language == 'eng') {
-      this.translate.setDefaultLang('eng');
-    }
-    if (language == 'ua') {
-      this.translate.setDefaultLang('ua');
-    }
-    if (language == 'pl') {
-      this.translate.setDefaultLang('pl');
-    }
+  public toggleMenu(): void {
+    this.isOpenMenu = !this.isOpenMenu;
   }
 
-  typeLines(): void {
-    if (this._currentIndex < this._texts.length) {
-      const line = this.textLine.nativeElement as HTMLElement;
-      line.textContent = '';
-      let index = 0;
-
-      const typeInterval = setInterval(() => {
-        if (index <= this._texts[this._currentIndex].length) {
-          line.textContent = this._texts[this._currentIndex].substring(0, index);
-          index++;
-        } else {
-          clearInterval(typeInterval);
-          const eraseTimeout = setTimeout(() => this.eraseLine(line), 1000);
-
-          // Store the timeout in the array
-          this._timeouts.push(eraseTimeout);
-        }
-      }, 100);
-
-      line.style.opacity = '1';
+  public onChangeLanguage(lang: string): void {
+    switch (lang) {
+      case 'en': this._translate.setDefaultLang('en');
+        break;
+      case 'pl': this._translate.setDefaultLang('pl');
+        break;
+      case 'ua': this._translate.setDefaultLang('ua');
+        break;
+      default: this._translate.setDefaultLang('ua');;
     }
+    this.toggleMenu()
   }
 
-  eraseLine(line: HTMLElement): void {
-    const eraseInterval = setInterval(() => {
-      if (line.textContent!.length > 0) {
-        line.textContent = line.textContent!.slice(0, -1);
-      } else {
-        clearInterval(eraseInterval);
-        line.style.opacity = '0';
-        this._currentIndex++;
-
-        if (this._currentIndex < this._texts.length) {
-          const typeTimeout = setTimeout(() => this.typeLines(), 500);
-
-          // Store the timeout in the array
-          this._timeouts.push(typeTimeout);
-        }
-      }
-    }, 50);
-
-    if (this._currentIndex + 1 >= this._texts.length) {
-      const showNextComponentTimeout = setTimeout(() => {
-        this.showNextComponent = true;
-      }, 1500);
-
-      // Store the timeout in the array
-      this._timeouts.push(showNextComponentTimeout);
-    }
-  }
-
-  onSkipIntro() {
-    // Clear all _timeouts and intervals
+  public onSkipIntro(): void {
     this._timeouts.forEach(timeout => clearTimeout(timeout));
-    this._intervals.forEach(interval => clearInterval(interval));
-
-    // Reset the arrays
     this._timeouts = [];
-    this._intervals = [];
-
     this.showNextComponent = true;
   }
 
-  onThemeSwitchChange() {
+  public onThemeSwitchChange(): void {
     this.isLightTheme = !this.isLightTheme;
     document.body.setAttribute(
       'data-theme',
       this.isLightTheme ? 'light' : 'dark'
     );
+    this.toggleMenu()
+  }
+
+  public ngOnDestroy(): void {
+    this._unsubscribe$.next();
+    this._unsubscribe$.complete();
+  }
+
+  private typeLines(): void {
+    if (this._currentIndex < this._texts.length) {
+      let index = 0;
+      const typeInterval = setInterval(() => {
+        if (index <= this._texts[this._currentIndex].length) {
+          this.helloText = this._texts[this._currentIndex].substring(0, index);
+          index++;
+        } else {
+          clearInterval(typeInterval);
+          setTimeout(() => this.eraseLine(), 1000);
+        }
+      }, 100);
+    }
+  }
+
+  private eraseLine(): void {
+    const eraseInterval = setInterval(() => {
+      if (this.helloText!.length > 0) {
+        this.helloText = this.helloText.slice(0, -1);
+      } else {
+        clearInterval(eraseInterval);
+        this._currentIndex++;
+
+        if (this._currentIndex < this._texts.length) {
+          setTimeout(() => this.typeLines(), 500);
+        }
+      }
+    }, 50);
+    if (this._currentIndex + 1 >= this._texts.length) {
+      setTimeout(() => {
+        this.showNextComponent = true;
+      }, 1500);
+    }
+  }
+
+  private isMobileResolution(width: number): boolean {
+    return width <= 1024;
   }
 }
