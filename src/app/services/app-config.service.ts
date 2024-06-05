@@ -12,7 +12,7 @@ export class AppConfigService {
 
   public load(): Promise<boolean> {
     return new Promise((resolve) => {
-      this._http.get<IAppConfig>(`${location.origin}/portfolio/assets/config.json`).subscribe({
+      this._http.get<IAppConfig>('./assets/config.json').subscribe({
         next: (data: IAppConfig) => {
           this.config = data;
           resolve(true);
