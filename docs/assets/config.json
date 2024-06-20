@@ -59,31 +59,31 @@
       "link": "https://github.com/kervyi7/skycall",
       "image": "assets/img/skycall-screen.png",
       "title": "SkyCall",
-      "technologies": "Angular, HTML, CSS, Angular Material"
+      "technologies": "Angular 7, HTML, CSS, Angular Material"
     },
     {
-      "link": "https://github.com/kervyi7/itpower",
+      "link": "https://github.com/kervyi7/itpower2.0",
       "image": "assets/img/itpower-screen.png",
       "title": "ITPower",
-      "technologies": "Angular, HTML, CSS"
+      "technologies": "Angular 17, HTML, CSS"
     },
     {
       "link": "https://github.com/kervyi7/innet",
       "image": "assets/img/innet-screen.png",
       "title": "Innet",
-      "technologies": "Angular, HTML, SCSS, Angular Material"
+      "technologies": "Angular 9, HTML, SCSS, Angular Material"
     },
     {
-      "link": "https://github.com/kervyi7/mailbox",
+      "link": "https://github.com/kervyi7/email-service",
       "image": "assets/img/mailbox-screen.png",
-      "title": "MailBox",
-      "technologies": "Angular, HTML, SCSS, ASP.NET Core Web API"
+      "title": "Email Service",
+      "technologies": "Angular 16, HTML, SCSS, ASP.NET Core Web API"
     },
     {
-      "link": "https://github.com/kervyi7/mailbox",
+      "link": "https://github.com/kervyi7/sms-server",
       "image": "assets/img/sms-screen.png",
       "title": "Sms Server",
-      "technologies": "Angular, HTML, CSS, Bootstrap"
+      "technologies": "Angular 8, HTML, CSS, Bootstrap"
     }
   ]
 }
